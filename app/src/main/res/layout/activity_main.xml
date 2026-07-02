@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/topIcons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="16dp"
+            android:src="@android:drawable/ic_menu_recent_history"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="16dp"
+            android:src="@android:drawable/ic_menu_manage"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_sort_by_size"
+            app:tint="@color/white" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/displayResult"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="bottom|end"
+        android:padding="24dp"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonGrid"
+        app:layout_constraintTop_toBottomOf="@id/topIcons" />
+
+    <GridLayout
+        android:id="@+id/buttonGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:rowCount="5"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Row 1 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnC"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:text="C"
+            android:textColor="@color/clear_orange"
+            android:textSize="24sp"
+            app:backgroundTint="@color/button_bg"
+            app:cornerRadius="40dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPercent"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:text="%"
+            android:textColor="@color/operator_blue"
+            android:textSize="24sp"
+            app:backgroundTint="@color/button_bg"
+            app:cornerRadius="40dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDelete"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:textColor="@color/operator_blue"
+            app:backgroundTint="@color/button_bg"
+            app:cornerRadius="40dp"
+            app:icon="@android:drawable/ic_input_delete"
+            app:iconGravity="textStart"
+            app:iconTint="@color/operator_blue" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDivide"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:text="÷"
+            android:textColor="@color/operator_blue"
+            android:textSize="24sp"
+            app:backgroundTint="@color/button_bg"
+            app:cornerRadius="40dp" />
+
+        <!-- Row 2 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn7"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:text="7"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:backgroundTint="@color/button_bg"
+            app:cornerRadius="40dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn8"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:text="8"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:backgroundTint="@color/button_bg"
+            app:cornerRadius="40dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn9"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:text="9"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:backgroundTint="@color/button_bg"
+            app:cornerRadius="40dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMultiply"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:text="×"
+            android:textColor="@color/operator_blue"
+            android:textSize="24sp"
+            app:backgroundTint="@color/button_bg"
+            app:cornerRadius="40dp" />
+
+        <!-- Row 3 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn4"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:text="4"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:backgroundTint="@color/button_bg"
+            app:cornerRadius="40dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn5"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:text="5"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:backgroundTint="@color/button_bg"
+            app:cornerRadius="40dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn6"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:text="6"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:backgroundTint="@color/button_bg"
+            app:cornerRadius="40dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMinus"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:text="-"
+            android:textColor="@color/operator_blue"
+            android:textSize="24sp"
+            app:backgroundTint="@color/button_bg"
+            app:cornerRadius="40dp" />
+
+        <!-- Row 4 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn1"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:text="1"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:backgroundTint="@color/button_bg"
+            app:cornerRadius="40dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn2"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:text="2"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:backgroundTint="@color/button_bg"
+            app:cornerRadius="40dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn3"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:text="3"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:backgroundTint="@color/button_bg"
+            app:cornerRadius="40dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPlus"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:text="+"
+            android:textColor="@color/operator_blue"
+            android:textSize="24sp"
+            app:backgroundTint="@color/button_bg"
+            app:cornerRadius="40dp" />
+
+        <!-- Row 5 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnExpand"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            app:backgroundTint="@color/button_bg"
+            app:cornerRadius="40dp"
+            app:icon="@android:drawable/ic_menu_sort_by_size"
+            app:iconGravity="textStart"
+            app:iconTint="@color/operator_blue" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn0"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:backgroundTint="@color/button_bg"
+            app:cornerRadius="40dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDot"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:text="."
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:backgroundTint="@color/button_bg"
+            app:cornerRadius="40dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEquals"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_columnWeight="1"
+            android:text="="
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:backgroundTint="@color/equals_blue"
+            app:cornerRadius="40dp" />
+
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
